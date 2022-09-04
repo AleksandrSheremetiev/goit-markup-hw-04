@@ -30,6 +30,9 @@ html{
 --active-bg-cl: #188CE8; 
 --dark-bg-cl: #2F303A;
 --light-bg-cl: #F5F5F5;
+/* Icons */
+--grey-icons-cl: #AFB1B8;
+--grey-icons-cl-10: rgba(255, 255, 255, 0.1);
 }
 /* Body */
 body{
@@ -107,24 +110,36 @@ img{
     display: block;
     padding: 32px 0;
 }
+.active {
+    color: var(--accent-txt-cl);
+}
 .list-contacts{
     display: flex;
     margin-left: auto;
     gap: 50px;
 }
 .header-item{
-    color: var(--secondary-txt-cl);  
+    color: var(--secondary-txt-cl); 
 }
-.active{
-    color: var(--accent-txt-cl);
+.contacs-link{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
+.contacts-icon{
+    fill: currentColor;
+}
+
 /* Hero */
 .hero{
-    background-color: var(--dark-bg-cl);
+    background-color: #C4C4C4;
     color: var(--light-txt-cl);
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+    background: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/background/img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .hero-title{
     font-weight: var(--title-txt-weight);
@@ -181,6 +196,16 @@ img{
     display: flex;
     gap: 30px;
 }
+.peculiarities-item-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: var(--secondary-bg-cl);
+    margin-bottom: 30px;
+    
+}
 .peculiarities-item{
     width: 270px;
 }
@@ -227,6 +252,8 @@ img{
 }
 .team-item{
     background-color: var(--primary-white-cl);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 .team-cards-txt{
     padding: 30px;
@@ -237,11 +264,81 @@ img{
 }
 .team-txt{
     color: var(--secondary-txt-cl);
+    margin-bottom: 16px;
 }
+/* Socials */
+.socials{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.socials-item{
+    width: 44px;
+    height: 44px;
+}
+.socials-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-white-cl);
+    border-radius: 50%;
+}
+.socials-icon{
+    fill: var(--grey-icons-cl);
+}
+.socials-link:hover,
+.socials-link:focus{
+    background-color: var(--accent-bg-cl);
+}
+.socials-link:hover .socials-icon,
+.socials-link:focus .socials-icon{
+    fill: var(--primary-white-cl);
+}
+/* Clients */
+.clients-group {
+    text-align: center;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.clients {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.clients-item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--grey-icons-cl);
+ }
+.clients-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.clients-icon {
+    fill: var(--grey-icons-cl);
+ }
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
+    fill: currentColor;
+ }
+.clients-item:hover,
+.clients-item:focus{
+    border: solid var(--accent-txt-cl);
+ }
 /* Footer */
 .footer{
+    display: flex;
     background-color: var(--dark-bg-cl);
     padding: 60px 0;
+}
+.footer-conteiner{
+    display: flex;
+    gap: 70px;
 }
 .footer-logo-txt{
     color: var(--light-txt-cl);
@@ -253,10 +350,26 @@ img{
     color: var(--light-txt-cl);
     margin-top: 20px;
 }
-
 .contacts-item{
     color: var(--grey-txt-cl-60);
     margin-top: 9px;
+}
+.socials-box{
+    display: inline-block;
+    padding-top: 12px;
+}
+.socials-title{
+    font-weight: var(--heading-txt-weight);
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: var(--light-txt-cl);
+    margin-bottom: 20px;
+}
+.footer-link{
+ background-color: var(--grey-icons-cl-10);
+}
+.socials-link .footer-icon{
+    fill: var(--light-txt-cl);
 }
 /* Portfolio */
 .projects{
@@ -294,6 +407,10 @@ img{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+}
+.projects-item:hover,
+.projects-item:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .card-txt{
     padding: 19px 23px;
